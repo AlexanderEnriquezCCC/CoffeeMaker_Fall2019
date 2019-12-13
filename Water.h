@@ -1,25 +1,20 @@
 #pragma once
-#include <stdio.h>
-#include <iostream>
-
+#include <string>
 class Water
 {
 public:
-	int Cups;
-	int waterTemp = 75;
-	int cupsInCoffeeMaker;
+	bool hasWater;
+	bool waterIn;
 
-	int userCupsChoice;
+	int waterTemprature;
+	int waterAmount;
+	int heldWaterAmount;
 
-	bool hasCups = false;
-	
-	void cupMenu();
-	void CollectWater(); // ask how many cups to get
+	void takeWater();
 	void putWaterIn();
-	void ChangeTemprature();
+	void heatWater();
 
 private:
-	int cupsCarried;
-	int changeTempTicks;
+	std::string str;
 };
 
